@@ -2,13 +2,15 @@
 
 ## Autoencoder-OpenCV
 
-В качества датасета будем использовать [этот](https://storage.yandexcloud.net/academy.ai/watermarked.zip). 
+[![ru](https://img.shields.io/badge/README_на_русском-2A2C39?style=for-the-badge&logo=github&logoColor=white)](README.ru.md)
 
-В данном примере я не стремился получить качественных выходных изображений, основная задача заключалась в том, чтобы показать принцип. Улучшить качество изображений помогут: расширение датасета на несколько порядков, применение более продвинутой аугментации (не только яркость и контрастность), увеличение размеров изображений, а также серия экспериментов со слоями автокодировщика. Однако ограничения бесплатного **Google Colab** не позволят нам получить высокого результата для данного датасета.
+As a dataset, we will use [this](https://storage.yandexcloud.net/academy.ai/watermarked.zip).
 
-Архитектура модели достаточно сложна. Она включает слои **Conv2D**, **MaxPooling2D** и **UpSampling2D**.
+In this example, I was not trying to get high-quality output images, the main task was to show the principle. Image quality can be improved by expanding the dataset by several orders of magnitude, using more advanced augmentation (not only brightness and contrast), increasing image size, as well as a series of experiments with autoencoder layers. However, the limitations of the free **Google Colab** will not allow us to achieve a high result for this dataset.
 
-В качестве финального результата выполняется предсказание на тестовых данных и отображение *10 примеров* для каждого из вариантов: *оригинал*, *с водяным знаком*, *предсказанное* и *шум* (разница).
+The model architecture is quite complex. It includes **Conv2D**, **MaxPooling2D**, and **UpSampling2D** layers.
 
-> Рекомендую использовать **графический ускоритель T4** для работы с
-> этим кодом
+As a final result, the model is trained on the test data and displays *10 examples* for each of the following options: *original*, *watermarked*, *predicted*, and *noise* (difference).
+
+> I recommend using the **T4 graphics accelerator** to work with
+> this code
